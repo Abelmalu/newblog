@@ -1,13 +1,12 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>articleabout</title>
-</head>
-<body>
-    <h1>welcome to the article detail page</h1>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.body }}</p>
-    <p>{{ article.date }}</p>
-</body>
-</html>
+{% extends 'base_layout.html'%}
+    {% block content %}
+    <div class="article-detail">
+        <div class="artcile">
+            <img src="{{article.thumb.url }}" alt="can't load the image">
+           <h2>{{ article.title }}</h2>
+            <p>{{ article.body }}</p>
+             <p>{{ article.date }}</p>
+        </div>
+</div>
+
+    {% endblock %}
